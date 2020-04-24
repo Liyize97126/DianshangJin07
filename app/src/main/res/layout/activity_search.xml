@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_menu_search"
+            android:layout_gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/edit_search_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:textSize="28sp"
+            android:hint="键入要搜索的内容"
+            android:singleLine="true"
+            android:background="#FFFFFF"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center_vertical"/>
+
+        <Button
+            android:id="@+id/submit_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="搜索"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorAccent"
+        android:orientation="vertical"/>
+
+    <TextView
+        android:id="@+id/search_data_show"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="搜索结果"
+        android:textSize="25sp"
+        android:textColor="#0000FF"
+        android:gravity="center"
+        android:background="#FFFFFF"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_result_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
