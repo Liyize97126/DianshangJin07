@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
 
 android {
     compileSdkVersion 29
@@ -21,6 +22,12 @@ android {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
     }
+}
+
+greendao {
+    schemaVersion 1  //版本
+    daoPackage 'com.bawei.dianshangjin07.dao' // 一般为app包名+生成文件的文件夹名
+    targetGenDir 'src/main/java' //生成文件路径
 }
 
 dependencies {
@@ -50,4 +57,7 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     //Glide
     implementation 'com.github.bumptech.glide:glide:4.11.0'
+    //Greendao
+    implementation 'org.greenrobot:greendao:3.2.2'
+    implementation 'org.greenrobot:greendao-generator:3.2.2'
 }
